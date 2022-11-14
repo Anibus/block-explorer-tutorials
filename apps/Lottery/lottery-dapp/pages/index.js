@@ -142,8 +142,8 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Ether Lottery</title>
-        <meta name="description" content="An Ethereum Lottery dApp" />
+        <title>HNIC Lottery</title>
+        <meta name="description" content="HNIC Lottery dApp" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -151,7 +151,7 @@ export default function Home() {
         <nav className="navbar mt-4 mb-4">
           <div className="container">
             <div className="navbar-brand">
-              <h1>Ether Lottery</h1>
+              <h1>HNIC Lottery Holla!</h1>
             </div>
             <div className="navbar-end">
               <button onClick={connectWalletHandler} className="button is-link">Connect Wallet</button>
@@ -163,7 +163,7 @@ export default function Home() {
             <div className="columns">
               <div className="column is-two-thirds">
                 <section className="mt-5">
-                  <p>Enter the lottery by sending 0.01 Ether</p>
+                  <p>Enter the lottery by sending 1 Matic</p>
                   <button onClick={enterLotteryHandler} className="button is-link is-large is-light mt-3">Play now</button>
                 </section>
                 <section className="mt-6">
@@ -173,6 +173,10 @@ export default function Home() {
                 <section className="mt-6">
                   <p><b>Admin only:</b> Pay winner</p>
                   <button onClick={payWinnerHandler} className="button is-success is-large is-light mt-3">Pay Winner</button>
+                </section>
+                <section className="mt-6">
+                  <p><b>Admin only:</b> Past Winners</p>
+                  <button onClick={connectWalletHandler} className="button is-success is-large is-light mt-3">Past Winner List</button>
                 </section>
                 <section>
                   <div className="container has-text-danger mt-6">
@@ -190,7 +194,7 @@ export default function Home() {
                   <div className="card">
                     <div className="card-content">
                       <div className="content">
-                        <h2>Lottery History</h2>
+                        <h2>Past Winner History</h2>
                         {
                           (lotteryHistory && lotteryHistory.length > 0) && lotteryHistory.map(item => {
                             if (lotteryId != item.id) {
@@ -246,7 +250,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <p>&copy; 2022 Block Explorer</p>
+        <p>&copy; 2022 H.N.I.C. Lottery Game</p>
       </footer>
     </div>
   )
