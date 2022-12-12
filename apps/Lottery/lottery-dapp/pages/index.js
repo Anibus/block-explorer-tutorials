@@ -201,7 +201,7 @@ export default function Home() {
                               return <div className="history-entry mt-3" key={item.id}>
                                 <div>Lottery #{item.id} winner:</div>
                                 <div>
-                                  <a href={`https://etherscan.io/address/${item.address}`} target="_blank">
+                                  <a href={`https://etherscan.io/address/${item.address}`} target="_blank" rel="noopener noreferrer">
                                     {item.address}
                                   </a>
                                 </div>
@@ -222,7 +222,7 @@ export default function Home() {
                           {
                             (lotteryPlayers && lotteryPlayers.length > 0) && lotteryPlayers.map((player, index) => {
                               return <li key={`${player}-${index}`}>
-                                <a href={`https://etherscan.io/address/${player}`} target="_blank">
+                                <a href={`https://etherscan.io/address/${player}`} target="_blank" rel="noopener noreferrer">
                                   {player}
                                 </a>
                               </li>
